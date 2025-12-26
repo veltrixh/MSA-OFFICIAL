@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact MSDC UEMK</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./css/contact.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0078D4',
+                            cyan: '#00B7C3',
+                            dark: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 0.2s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar for Webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+
+        /* Form Auto-fill fix for dark mode */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus {
+            -webkit-text-fill-color: inherit !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        /* Microsoft Logo Grid */
+        .ms-logo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .ms-tile {
+            width: 100%;
+            height: 100%;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gray-50 dark:bg-brand-dark text-gray-800 dark:text-gray-100 transition-colors duration-500 font-sans selection:bg-blue-200 dark:selection:bg-blue-900 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LEFT -->
+            <div class="nav-left">
+                <div class="college-logo-group">
+                    <img src="./assets/iem.png" class="college-logo" alt="IEM logo">
+                    <img src="./assets/uem.png" class="college-logo" alt="UEM logo">
+                </div>
+
+                <div class="logo-container">
+                    <img src="./assets/icon46.jpg" class="logo-icon logo-light" alt="MSDC logo light">
+                    <img src="./assets/icon45.jpg" class="logo-icon logo-dark" alt="MSDC logo dark">
+                </div>
+            </div>
+
+            <!-- MENU -->
+            <ul class="nav-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#projects">Projects</a></li>
+                <li><a href="./index.html#team">Team</a></li>
+                <li><a href="./event.html">Events</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <!-- ACTIONS -->
+            <div class="nav-actions">
+                <button id="themeBtn" class="theme-toggle" aria-pressed="false" title="Toggle theme">
+                    🌙
+                </button>
+
+                <!-- Notifications -->
+                <div class="notify-wrapper">
+                    <span id="notify-bell">🔔</span>
+                    <span id="notify-count">0</span>
+                    <div id="notify-dropdown" class="hidden">
+                        <h4>Notifications</h4>
+                        <ul id="notify-list"></ul>
+                    </div>
+                </div>
+
+                <!-- Join Button -->
+                <a href="#join" class="btn-register">Join</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- ===============
+
+    <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        <!-- Hero Section -->
+    <div class="relative mb-16">
+        <!-- Background Glow -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-blue-400/20 dark:bg-blue-600/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="relative glass rounded-3xl p-8 md:p-12 shadow-2xl text-center md:text-left overflow-hidden">
+            <!-- Decorative Shape -->
+            <div class="absolute top-0 right-0 p-12 opacity-10 md:opacity-20 pointer-events-none">
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="100" fill="url(#paint0_linear)" />
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="0" y1="0" x2="200" y2="200"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stopColor="#0078D4" />
+                            <stop offset="1" stopColor="#00B7C3" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative">
+                <div class="space-y-6 max-w-2xl">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
+                        We are hiring core members
+                    </div>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight">
+                        Get in touch with <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">MSDC
+                            UEMK</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
+                        Have questions about events, workshops, or collaborations?
+                        Our team typically responds within <span class="font-semibold text-gray-900 dark:text-white">2
+                            working days</span>.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <button
+                            onclick="document.getElementById('contact-container').scrollIntoView({behavior: 'smooth'})"
+                            class="px-8 py-3.5 rounded-xl bg-brand-blue hover:bg-[#0063B1] text-white font-semibold shadow-lg hover:shadow-blue-500/40 transition-all transform hover:-translate-y-0.5">
+                            Send a Message
+                        </button>
+                        <button
+                            class="px-8 py-3.5 rounded-xl bg-white dark:bg-slate-700 text-gray-700 dark:text-white font-semibold shadow-md hover:bg-gray-50 dark:hover:bg-slate-600 border border-gray-200 dark:border-slate-600 transition-all">
+                            Call Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <!-- Card 1 -->
+        <div
+            class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/50 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+            <div class="flex items-start space-x-4">
+                <div
+                    class="p-3 rounded-xl bg-blue-50 dark:bg-slate-700 text-brand-blue dark:text-brand-cyan group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
+                        Campus</h3>
+                    <p class="text-gray-800 dark:text-white font-medium text-lg leading-snug">New Town, Kolkata</p>
+                    <div
+                        class="mt-2 text-sm text-brand-blue dark:text-brand-cyan font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        View Map <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <a href="mailto:contact@msdcuemk.com"
+            class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/50 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer block">
+            <div class="flex items-start space-x-4">
+                <div
+                    class="p-3 rounded-xl bg-blue-50 dark:bg-slate-700 text-brand-blue dark:text-brand-cyan group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
+                        Email Us</h3>
+                    <p class="text-gray-800 dark:text-white font-medium text-lg leading-snug">KV1@gmail.com</p>
+                    <div
+                        class="mt-2 text-sm text-brand-blue dark:text-brand-cyan font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        Send Email <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <div
+            class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/50 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+            <div class="flex items-start space-x-4">
+                <div
+                    class="p-3 rounded-xl bg-blue-50 dark:bg-slate-700 text-brand-blue dark:text-brand-cyan group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="phone" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
+                        Phone</h3>
+                    <p class="text-gray-800 dark:text-white font-medium text-lg leading-snug">+91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+            class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/50 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+            <div class="flex items-start space-x-4">
+                <div
+                    class="p-3 rounded-xl bg-blue-50 dark:bg-slate-700 text-brand-blue dark:text-brand-cyan group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="clock" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
+                        Hours</h3>
+                    <p class="text-gray-800 dark:text-white font-medium text-lg leading-snug">9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Split -->
+    <div id="contact-container" class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+
+        <!-- Left Column: Form -->
+        <div class="w-full lg:w-2/3">
+            <div
+                class="bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100 dark:border-slate-700/50 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#0078D4] to-[#00B7C3]"></div>
+
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Send us a message</h2>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Fill out the form below and we'll get back to you as soon as possible.
+                    </p>
+                </div>
+
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 focus:border-brand-blue focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 outline-none transition-all text-gray-800 dark:text-white placeholder-gray-400"
+                                placeholder="John Doe">
+                            <p id="nameError" class="hidden text-xs text-red-500 ml-1">Name is required</p>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Phone
+                                Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 focus:border-brand-blue focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 outline-none transition-all text-gray-800 dark:text-white placeholder-gray-400"
+                                placeholder="+91 98765 43210">
+                            <p id="phoneError" class="hidden text-xs text-red-500 ml-1">Valid 10-digit phone required
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Email Address</label>
+                        <div class="relative">
+                            <i data-lucide="mail" class="absolute left-4 top-3.5 text-gray-400 w-5 h-5"></i>
+                            <input type="email" id="email" name="email"
+                                class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 focus:border-brand-blue focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 outline-none transition-all text-gray-800 dark:text-white placeholder-gray-400"
+                                placeholder="john@example.com">
+                        </div>
+                        <p id="emailError" class="hidden text-xs text-red-500 ml-1">Valid email required</p>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 focus:border-brand-blue focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 outline-none transition-all text-gray-800 dark:text-white placeholder-gray-400 resize-none"
+                            placeholder="How can we help you?"></textarea>
+                        <p id="messageError" class="hidden text-xs text-red-500 ml-1">Message cannot be empty</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitBtn"
+                        class="w-full py-4 rounded-xl font-bold text-white shadow-lg flex items-center justify-center space-x-2 transition-all duration-300 bg-gradient-to-r from-[#0078D4] to-[#00B7C3] hover:shadow-blue-500/30 hover:scale-[1.01]">
+                        <span id="btnText" class="flex items-center">
+                            <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                            Send Message
+                        </span>
+                        <div id="btnLoader" class="hidden animate-spin rounded-full h-5 w-5 border-b-2 border-white">
+                        </div>
+                    </button>
+                    <p id="successMessage"
+                        class="hidden text-green-600 dark:text-green-400 text-center font-semibold mt-2">Message sent
+                        successfully!</p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Column: Sticky Sidebar -->
+        <div class="w-full lg:w-1/3">
+            <div class="sticky top-24 space-y-6">
+                <!-- Map Card -->
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl p-2 shadow-lg hover:shadow-xl transition-shadow duration-300 h-[420px] overflow-hidden border border-gray-100 dark:border-slate-700 relative group">
+                    <div
+                        class="absolute inset-0 z-10 pointer-events-none rounded-xl ring-1 ring-black/5 dark:ring-white/10">
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.090300958178!2d88.48882047587784!3d22.57573533285702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275326959580b%3A0x62804595231735a4!2sUniversity%20of%20Engineering%20%26%20Management%20(UEM)%2C%20Kolkata!5e0!3m2!1sen!2sin!4v1703444444444!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-xl filter dark:grayscale-[0.4] dark:contrast-[1.1] transition-all duration-500 group-hover:scale-[1.02]">
+                    </iframe>
+
+                    <div
+                        class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-3 rounded-xl shadow-lg flex items-center justify-between border border-gray-200 dark:border-slate-700">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-red-500"></i>
+                            <span class="text-xs font-semibold text-gray-700 dark:text-gray-200">University Area, New
+                                Town</span>
+                        </div>
+                        <a href="#" class="text-xs font-bold text-brand-blue hover:underline flex items-center">
+                            Get Directions <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Connect Card -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 shadow-md border border-blue-100 dark:border-slate-700">
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                        <i data-lucide="message-square" class="w-5 h-5 mr-2 text-teal-500"></i>
+                        Quick Connect
+                    </h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Follow our socials for event updates.
+                        </p>
+                        <div class="flex space-x-2">
+                            <a href="#"
+                                class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-700 text-gray-600 dark:text-gray-200 hover:bg-brand-blue hover:text-white dark:hover:bg-brand-cyan dark:hover:text-white shadow-sm hover:shadow-md transition-all duration-300">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-700 text-gray-600 dark:text-gray-200 hover:bg-brand-blue hover:text-white dark:hover:bg-brand-cyan dark:hover:text-white shadow-sm hover:shadow-md transition-all duration-300">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-700 text-gray-600 dark:text-gray-200 hover:bg-brand-blue hover:text-white dark:hover:bg-brand-cyan dark:hover:text-white shadow-sm hover:shadow-md transition-all duration-300">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer
+        class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 py-12 mt-12 transition-colors duration-300">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity">
+                <div class="ms-logo mr-1">
+                    <div class="ms-tile bg-[#F25022]"></div>
+                    <div class="ms-tile bg-[#7FBA00]"></div>
+                    <div class="ms-tile bg-[#00A4EF]"></div>
+                    <div class="ms-tile bg-[#FFB900]"></div>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">MSDC UEMK</span>
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-400 text-center md:text-right">
+                &copy; <span id="year"></span> Microsoft Student Developer Community UEMK. <br
+                    class="hidden md:block" />
+                Not associated with Microsoft Corporation.
+            </p>
+        </div>
+    </footer>
+    <script src="./js/contact.js"></script>
+
+    <!-- Logic Script -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const mobileThemeToggleBtn = document.getElementById('mobileThemeToggle');
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Initialize Theme from LocalStorage or System Pref
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white/80', 'dark:bg-slate-900/80', 'backdrop-blur-md', 'shadow-md', 'border-gray-200', 'dark:border-gray-800');
+                navbar.classList.remove('bg-transparent', 'border-transparent');
+            } else {
+                navbar.classList.remove('bg-white/80', 'dark:bg-slate-900/80', 'backdrop-blur-md', 'shadow-md', 'border-gray-200', 'dark:border-gray-800');
+                navbar.classList.add('bg-transparent', 'border-transparent');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.contains('hidden');
+            if (isClosed) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+
+        // Form Validation & Submission
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnLoader = document.getElementById('btnLoader');
+        const successMessage = document.getElementById('successMessage');
+
+        const inputs = {
+            name: document.getElementById('name'),
+            phone: document.getElementById('phone'),
+            email: document.getElementById('email'),
+            message: document.getElementById('message')
+        };
+        const errors = {
+            name: document.getElementById('nameError'),
+            phone: document.getElementById('phoneError'),
+            email: document.getElementById('emailError'),
+            message: document.getElementById('messageError')
+        };
+
+        const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
+        const validatePhone = (phone) => /^\d{10}$/.test(phone);
+
+        // Clear error on input
+        Object.keys(inputs).forEach(key => {
+            inputs[key].addEventListener('input', () => {
+                inputs[key].classList.remove('border-red-500');
+                errors[key].classList.add('hidden');
+            });
+        });
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validate Name
+            if (!inputs.name.value.trim()) {
+                inputs.name.classList.add('border-red-500');
+                errors.name.classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Validate Phone
+            if (!validatePhone(inputs.phone.value.trim())) {
+                inputs.phone.classList.add('border-red-500');
+                errors.phone.classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Validate Email
+            if (!validateEmail(inputs.email.value.trim())) {
+                inputs.email.classList.add('border-red-500');
+                errors.email.classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Validate Message
+            if (!inputs.message.value.trim()) {
+                inputs.message.classList.add('border-red-500');
+                errors.message.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Simulate Loading
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoader.classList.remove('hidden');
+
+            // Success Simulation
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoader.classList.add('hidden');
+
+                // Show Success State
+                submitBtn.classList.remove('bg-gradient-to-r', 'from-[#0078D4]', 'to-[#00B7C3]');
+                submitBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+                submitBtn.innerHTML = '<span>Message Sent!</span>';
+
+                contactForm.reset();
+
+                // Reset Button after 3s
+                setTimeout(() => {
+                    submitBtn.classList.add('bg-gradient-to-r', 'from-[#0078D4]', 'to-[#00B7C3]');
+                    submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    submitBtn.innerHTML = `<span id="btnText" class="flex items-center"><i data-lucide="send" class="w-5 h-5 mr-2"></i>Send Message</span><div id="btnLoader" class="hidden animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>`;
+                    lucide.createIcons(); // Re-render icon
+                }, 3000);
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

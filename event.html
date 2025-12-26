@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSDC | Events</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- MAIN THEME CSS -->
+    <link rel="stylesheet" href="./css/event.css" />
+</head>
+
+<body>
+
+    <!-- ================= MSDC NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- LEFT -->
+            <div class="nav-left">
+                <div class="college-logo-group">
+                    <img src="./assets/iem.png" class="college-logo" alt="IEM logo">
+                    <img src="./assets/uem.png" class="college-logo" alt="UEM logo">
+                </div>
+
+                <div class="logo-container">
+                    <img src="./assets/icon46.jpg" class="logo-icon logo-light" alt="MSDC logo light">
+                    <img src="./assets/icon45.jpg" class="logo-icon logo-dark" alt="MSDC logo dark">
+                </div>
+            </div>
+
+            <!-- MENU -->
+            <ul class="nav-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#projects">Projects</a></li>
+                <li><a href="./index.html#team">Team</a></li>
+                <li><a href="./event.html" class="active">Events</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <!-- ACTIONS -->
+            <div class="nav-actions">
+                <button id="themeBtn" class="theme-toggle" aria-pressed="false" title="Toggle theme">
+                    Light
+                </button>
+
+                <!-- Notifications -->
+                <div class="notify-wrapper">
+                    <span id="notify-bell">🔔</span>
+                    <span id="notify-count">0</span>
+                    <div id="notify-dropdown" class="hidden">
+                        <h4>Notifications</h4>
+                        <ul id="notify-list"></ul>
+                    </div>
+                </div>
+
+                <!-- Join Button -->
+                <a href="#join" class="btn-register">Join</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- ================= END NAVBAR ================= -->
+
+
+    <!-- ==========================================================
+     PAGE HEADER
+========================================================== -->
+    <section class="page-header">
+        <h2>Events & Workshops</h2>
+        <p>Explore MSDC’s technical events, seminars, hackathons and bootcamps.</p>
+    </section>
+
+
+    <!-- ==========================================================
+     EVENT CARDS
+========================================================== -->
+    <div class="event-container">
+
+
+        <!-- ======================================================
+     OFFICIAL CIRCULAR – CORE COMMITTEE
+======================================================= -->
+        <div class="event-card">
+
+            <h3 class="event-title">Microsoft ChainSphere – Official Approval Notice</h3>
+
+            <div class="event-meta">
+                <span>📅 24 January 2026</span>
+                <span>🕰️ 10:00 AM – 3:00 PM</span>
+            </div>
+
+            <p class="event-description">
+                Date: 18/12/2025 <br><br>
+
+                This is to formally notify all Core Committee Members that the event scheduled
+                on <strong>24th January, 2026</strong> has been duly approved by the
+                <strong>Hon’ble Head of the Department (HOD)</strong>.
+            </p>
+
+            <h4 class="section-label">Event Particulars</h4>
+
+            <p class="committee">
+                • Event Name: Microsoft ChainSphere <br>
+                • Date: 24th January, 2026 <br>
+                • Time: 10:00 AM to 3:00 PM
+            </p>
+
+            <h4 class="section-label">Important Instructions</h4>
+
+            <p class="event-description">
+                All Core Committee Members are hereby directed to remain present without fail
+                on the aforementioned date and time. Attendance is strictly mandatory, and
+                absence will be considered only under exceptional circumstances with prior
+                approval.
+                <br><br>
+                Furthermore, all teams are instructed to commence work immediately on the
+                responsibilities and tasks already assigned to them. Any delay, negligence,
+                or lack of coordination will be viewed seriously.
+                <br><br>
+                This circular may be treated as <strong>most urgent and important</strong>.
+            </p>
+
+            <h4 class="section-label">Issued By</h4>
+            <p class="committee">By Order<br>Secretary</p>
+
+        </div>
+        <!-- END OFFICIAL CIRCULAR -->
+
+
+    </div> <!-- END CONTAINER -->
+
+
+    <!-- ==========================================================
+     JS
+========================================================== -->
+    <script src="./js/event.js"></script>
+
+</body>
+
+</html>

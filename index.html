@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MSDC-UEMK — Home</title>
+    <meta name="description" content="MSDC UEMK — Learn Azure, build projects, join the Web Dev core team." />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Navbar styles FIRST -->
+    <link rel="stylesheet" href="./css/navbar.css">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+
+
+<body data-theme="light">
+    <!-- HEADER -->
+
+    <!-- ================= MSDC NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- LEFT -->
+            <div class="nav-left">
+                <div class="college-logo-group">
+                    <img src="./assets/iem.png" class="college-logo" alt="IEM logo">
+                    <img src="./assets/uem.png" class="college-logo" alt="UEM logo">
+                </div>
+
+                <div class="logo-container">
+                    <img src="./assets/icon46.jpg" class="logo-icon logo-light" alt="MSDC logo light">
+                    <img src="./assets/icon45.jpg" class="logo-icon logo-dark" alt="MSDC logo dark">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MENU -->
+        <ul class="nav-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="./event.html">Events</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <!-- ACTIONS -->
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle" aria-pressed="false" title="Toggle theme">
+                🌙
+            </button>
+
+            <!-- Notifications -->
+            <div class="notify-wrapper">
+                <span id="notify-bell">🔔</span>
+                <span id="notify-count">0</span>
+                <div id="notify-dropdown" class="hidden">
+                    <h4>Notifications</h4>
+                    <ul id="notify-list"></ul>
+                </div>
+            </div>
+
+            <!-- Join Button -->
+            <a href="#join" class="btn-register">Join</a>
+        </div>
+
+        </div>
+    </nav>
+    <!-- ================= END NAVBAR ================= -->
+
+
+
+
+
+
+    <!-- MAIN -->
+    <main>
+        <!-- SECTION 1: HERO -->
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy hero-main">
+                    <h1 class="hero-title-big">
+                        Microsoft Student Society
+                    </h1>
+
+                    <div class="hero-campus">UEMK</div>
+
+                    <div class="hero-tagline">
+                        Build · Innovate · Collaborate · Lead
+                    </div>
+
+                    <p class="hero-subtext">
+                        Official Microsoft Student Developer Community at the University of
+                        Engineering &amp; Management, Kolkata.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#projects">Explore Projects</a>
+                        <a class="btn btn-ghost" href="#team">Meet the Team</a>
+                    </div>
+                </div>
+
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator" aria-hidden="true">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+        </section>
+        <!-- SECTION: VIDEO -->
+        <section id="intro-video" class="video-section">
+            <div class="container video-inner">
+
+                <div class="video-header">
+                    <span class="team-badge">Microsoft Student Ambassador</span>
+                    <h2>Inside MSDC UEMK</h2>
+                    <p class="muted-2">
+                        Learn how the Microsoft Student Developer Community at UEMK empowers
+                        students to build real-world solutions, collaborate globally, and grow as leaders.
+                    </p>
+                </div>
+
+                <div class="video-wrapper">
+                    <div class="video-wrapper">
+                        <div class="video-shell">
+
+                            <video id="msdcVideo" class="hero-video" autoplay muted loop playsinline preload="auto"
+                                poster="./assets/video-poster.jpg">
+
+                                <source src="./assets/Test1.mp4" type="video/mp4">
+                            </video>
+
+                            <!-- Sound toggle -->
+                            <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+                                🔇
+                            </button>
+
+                            <!-- Soft overlay -->
+                            <div class="video-overlay"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: PROJECTS -->
+        <section id="projects">
+            <!-- ROW 1 HEADING -->
+            <div class="row-header focus-box">
+                <div class="focus-glow"></div>
+
+                <div class="focus-orb-wrapper">
+                    <div class="focus-orb">
+                        <span>LATEST NEWS</span>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="status-grid centered-grid">
+
+                    <!-- PROJECTS -->
+                    <article class="status-card image-card">
+                        <img src="./assets/projects.png" alt="Projects">
+
+                        <div class="card-overlay">
+                            <h3>Projects</h3>
+                            <p>Technical initiatives driven by MSDC members.</p>
+
+                            <div class="status-list">
+                                <div class="status-item">
+                                    <span class="dot green"></span>
+                                    <span>Ongoing</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="dot blue pulse-slow"></span>
+                                    <span>Upcoming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- FUTURE GOALS (CENTER) -->
+                    <article class="status-card image-card featured future-goal">
+
+                        <img src="./assets/goals.png" alt="Future Goals">
+
+                        <div class="card-overlay">
+                            <h3>Future Goals</h3>
+                            <p>
+                                Long-term vision, industry collaboration, research,
+                                large-scale community impact, and global presence.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- EVENTS -->
+                    <article class="status-card image-card">
+                        <img src="./assets/events.png" alt="Events">
+
+                        <div class="card-overlay">
+                            <h3>Events</h3>
+                            <p>Workshops, hackathons, sessions & meetups.</p>
+
+                            <div class="status-list">
+                                <div class="status-item live">
+                                    <span class="dot red pulse-fast"></span>
+                                    <span class="live-text">LIVE</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="dot amber pulse"></span>
+                                    <span>Upcoming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+        </section>
+
+        <!-- Replace the current team section with this TEASER version -->
+
+        <section id="team" class="team-showcase">
+            <div class="container">
+
+                <div class="team-header">
+                    <span class="team-badge">Our People</span>
+                    <h2>Architects of Innovation</h2>
+                    <p class="muted-2">
+                        The faculty mentors and student leaders who guide, manage, and grow MSDC UEMK.
+                    </p>
+                </div>
+<!-- ✅ FACULTY COORDINATORS (RESTORED) -->
+<h3 class="team-role">Faculty Coordinators</h3>
+<div class="team-grid" id="faculty-grid"></div>
+
+<!-- ✅ CORE STUDENT LEADERSHIP (RESTORED) -->
+<h3 class="team-role">Core Student Leadership</h3>
+<div class="team-grid" id="executive-grid"></div>
+
+<!-- ✅ ADMINISTRATION -->
+<h3 class="team-role">Administration & Governance</h3>
+<div class="team-grid" id="core-grid"></div>
+
+<!-- ✅ FUNCTIONAL LEADS -->
+<h3 class="team-role">Functional Leads</h3>
+<div class="team-grid" id="leads-grid"></div>
+                
+                
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <!-- SECTION 4: JOIN -->
+        <section id="join">
+            <div class="container">
+                <div class="join-section">
+                    <h3>Join the Web Dev Team</h3>
+                    <p class="muted-2">Contribute to projects, build your portfolio, and get mentorship from industry
+                        experts. Work with cutting-edge technologies and be part of something bigger.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#contact">Sign up Now</a>
+                        <a class="btn btn-ghost" href="https://github.com/msdc-uemk" target="_blank">View GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CONTACT/FOOTER -->
+        <footer id="contact" class="site-footer">
+            <div class="container footer-inner">
+                <div>
+                    <strong>MSDC UEMK</strong>
+                    <div class="muted-2">Microsoft Student Developer Community</div>
+                    <div class="muted-2" style="margin-top: 4px; font-size: 0.9rem;">University of Engineering &
+                        Management, Kolkata</div>
+                </div>
+                <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+                    <a class="muted-2" href="#privacy" style="font-size: 0.9rem;">Code of Conduct</a>
+                    <a class="muted-2" href="#privacy" style="font-size: 0.9rem;">Privacy Policy</a>
+                    <a class="muted-2" href="mailto:contact@msdc-uemk.org" style="font-size: 0.9rem;">Contact Us</a>
+                    <small class="muted-2" style="font-size: 0.9rem;">© <span id="year"></span> MSDC-UEMK. All rights
+                        reserved.</small>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
